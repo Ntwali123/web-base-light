@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Light Control Hub</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body class="light-mode">
+    <canvas id="particles"></canvas>
+    <div class="theme-toggle">
+      <button id="themeToggle" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+    <div class="container">
+      <div class="dashboard">
+        <div class="sidebar">
+          <div class="logo">
+            <i class="fas fa-home"></i>
+            <span>SmartHome</span>
+          </div>
+          <div class="menu">
+            <div class="menu-item active">
+              <i class="fas fa-lightbulb"></i>
+              <span>Light Control</span>
+            </div>
+            <div class="menu-item disabled">
+              <i class="fas fa-temperature-high"></i>
+              <span>Temperature</span>
+            </div>
+            <div class="menu-item disabled">
+              <i class="fas fa-door-closed"></i>
+              <span>Security</span>
+            </div>
+          </div>
+        </div>
+        <div class="main-content">
+          <div class="header">
+            <h1>Light Control Hub</h1>
+            <div class="time" id="currentTime">00:00:00</div>
+          </div>
+          <div class="cards-container">
+            <div class="card status-card">
+              <div class="card-header">
+                <h3>Light Status</h3>
+              </div>
+              <div class="light-status">
+                <div class="light-indicator">
+                  <div class="bulb">
+                    <i class="fas fa-lightbulb"></i>
+                  </div>
+                  <div class="status-text">
+                    Currently: <span id="lightStatus">OFF</span>
+                  </div>
+                </div>
+                <div class="next-event" id="nextEvent">
+                  Next event: Not scheduled
+                </div>
+              </div>
+            </div>
+            <div class="card schedule-card">
+              <div class="card-header">
+                <h3>Smart Light Scheduler</h3>
+              </div>
+              <div class="scheduler-form">
+                <div class="time-inputs">
+                  <div class="input-group">
+                    <label for="onTime">
+                      <i class="fas fa-sun"></i> On Time
+                    </label>
+                    <input type="time" id="onTime" required />
+                  </div>
+                  <div class="input-group">
+                    <label for="offTime">
+                      <i class="fas fa-moon"></i> Off Time
+                    </label>
+                    <input type="time" id="offTime" required />
+                  </div>
+                  <button id="submitBtn" class="submit-btn">
+                    <span class="btn-text">Set Schedule</span>
+                    <i class="fas fa-clock"></i>
+                  </button>
+                </div>
+                <div id="status" class="status"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
