@@ -109,6 +109,26 @@ A modern web-based IoT system for scheduling light controls using a graphical in
    - Adaptive layout
    - Touch-friendly interface
 
+## Screenshots
+
+### Light Mode Interface
+![Light Mode Interface](screenshots/light-mode.png)
+*The dashboard in light mode showing the light control interface with time inputs and status display*
+
+### Dark Mode Interface
+![Dark Mode Interface](screenshots/dark-mode.png)
+*The dashboard in dark mode with the same functionality but a darker theme*
+
+## Terminal Outputs
+
+### WebSocket Server
+![WebSocket Server](screenshots/websocket-server.png)
+*WebSocket server running and waiting for connections on port 8767*
+
+### MQTT Subscriber
+![MQTT Subscriber](screenshots/mqtt-subscriber.png)
+*MQTT subscriber running in test mode, showing schedule updates and current time*
+
 ## Troubleshooting
 
 1. **WebSocket Connection Failed**
